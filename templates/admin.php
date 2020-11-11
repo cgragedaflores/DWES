@@ -17,7 +17,7 @@
                 <div class="imgcont">
                     <img src="../img/usuario.svg" alt="">
                 </div>
-                <span>User</span>
+                <span>LOL</span>
             </a>
         </div>
         <div class="opciones">

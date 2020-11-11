@@ -1,0 +1,580 @@
+/* start csss */
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+  background-color: #dfe6e9;
+}
+
+header{
+  z-index: 1;
+  position: fixed;
+  background: #22242A;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 30px;
+}
+
+.left_area h3{
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span{
+  color: #ee5253;
+}
+
+.logout_btn{
+  padding: 5px;
+  background: #ee5253;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.logout_btn:hover{
+  background: #ee5253;
+}
+
+.sidebar{
+  z-index: 1;
+  top: 0;
+  background: #2f323a;
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 9%);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+
+.profile_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile_info .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile_info h4{
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #ee5253;
+}
+
+.sidebar i{
+  padding-right: 10px;
+}
+
+label #sidebar_btn{
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover{
+  color: #ee5253;
+}
+
+#check:checked ~ .sidebar{
+  left: -185px;
+}
+
+#check:checked ~ .sidebar a span{
+  display: none;
+}
+
+#check:checked ~ .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  width: (100% - 250px);
+  margin-top: 60px;
+  padding: 20px;
+  margin-left: 250px;
+  background: #dcdde1;
+  height: 100%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+
+#check:checked ~ .sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+/* FORM STYLES START */
+/* CSS FORM START */
+.content .form-update {
+  width: 90%;
+  background: #dcdde1;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  -webkit-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+}
+/* INPUT IMAGE CSS START */
+.form-update .update-form .gp_input_image {
+  width: 30%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  margin: 20px;
+}
+.form-update .gp_input_image label {
+  width: 100%;
+  height: 10%;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.form-update .gp_input_image input {
+  width: 90%;
+  display: flex;
+  font-size: 1em;
+  height: 10%;
+
+}
+.form-update .show_cover {
+  width: 60%;
+  height: 80%;
+  border-radius: 3px;
+  border: none;
+}
+/* USER PICTURE STYLE */
+.form-update .show_cover_user{
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-update .show_cover_user img{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+/* USER PICTURE STYLE END */
+.form-update .gp_input_image .show_cover img {
+  width: 90%;
+  height: 90%;
+  border-radius: 3px;
+  border: none;
+}
+
+/* IMPUT IMAGE CSS END */
+/* ATRRIBUTE BOOK CSS START */
+.form-update .update-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form-update .update-form .gp_input {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.form-update .update-form .gp_input label {
+  padding-right: 10px;
+  color: #2f3640;
+  font-size: 1.3em;
+  font-weight: 800;
+  width: 30%;
+  letter-spacing: normal;
+}
+.form-update .update-form .gp_input input {
+  width: 60%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #f5f6fa;
+  color: #353b48;
+  text-align: center;
+  font-size: 1em;
+  margin: 10px;
+  transition: 0.5s background;
+}
+.form-update .update-form .gp_input input:focus {
+  color: #2f3640;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+  background: #dcdde1;
+  border: none;
+  -webkit-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+}
+.form-update .update-form .gp_input select {
+  width: 30%;
+  height: 40%;
+  border-radius: 3px;
+  border: none;
+  background: #dcdde1;
+  font-size: 1.1em;
+  color: #2f3640;
+  font-weight: 600;
+}
+/* ATRIBUTTE BOOK CSS END */
+/* Botton css start */
+.form-update .update-form .botones {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.form-update .update-form button {
+  width: 30%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 20px;
+}
+/* FORM STYLES END */
+/* CONTENT CSS START */
+/* WORK IN PROGRESS THEME START */
+.content .work-progress {
+  background-image: url("../img/404.png");
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 60vh;
+  background-size: contain;
+}
+/* WORK IN PROGRESS THEME END */
+/* SEARCH START */
+/* SEARCH END */
+.content > span {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3em;
+}
+.content .content-book {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+.content .content-book .book {
+  width: 15%;
+  height: 30vh;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content .content-book .book .book_img {
+  width: 95%;
+  height: 100%;
+}
+.content .content-book .book span {
+  font-size: 1.3em;
+  color: #fff;
+}
+/* Responsive CSS */
+
+@media screen and (max-width: 780px){
+  .sidebar{
+    display: none;
+  }
+
+  #sidebar_btn{
+    display: none;
+  }
+
+  .content{
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0s;
+  }
+
+  #check:checked ~ .content{
+    margin-left: 0;
+  }
+  .mobile_nav{
+    display: block;
+    width: calc(100% - 0%);
+  }
+
+  .nav_bar{
+    background: #222;
+    width: (100% - 0px);
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav_bar .mobile_profile_image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav_bar .nav_btn{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  .nav_bar .nav_btn:hover{
+    color: #ee5253;
+  }
+
+  .mobile_nav_items{
+    background: #2F323A;
+    display: none;
+  }
+
+  .mobile_nav_items a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+
+  .mobile_nav_items a:hover{
+    background: #ee5253;
+  }
+
+  .mobile_nav_items i{
+    padding-right: 10px;
+  }
+
+  .active{
+    display: block;
+  }
+  .content .content-book {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .content .content-book .book {
+    text-decoration: none;
+    margin: 20px auto auto auto;
+    width: 35%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .content .content-book .book .book_img {
+    width: 80%;
+    height: 40vh;
+    background-color: royalblue;
+  }
+  .content .content-book .book span {
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+  }
+  .form-update{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-update .gp_input_image{
+    width: 60%;
+  }
+  .form-update .update-form{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .sidebar{
+    display: none;
+  }
+
+  #sidebar_btn{
+    display: none;
+  }
+
+  .content{
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0s;
+  }
+
+  #check:checked ~ .content{
+    margin-left: 0;
+  }
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0.6s;
+  }
+  .mobile_nav{
+    display: block;
+    width: calc(100% - 0%);
+  }
+
+  .nav_bar{
+    background: #222;
+    width: (100% - 0px);
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav_bar .mobile_profile_image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav_bar .nav_btn{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  .nav_bar .nav_btn:hover{
+    color: #ee5253;
+  }
+
+  .mobile_nav_items{
+    background: #2F323A;
+    display: none;
+  }
+
+  .mobile_nav_items a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+
+  .mobile_nav_items a:hover{
+    background: #ee5253;
+  }
+
+  .mobile_nav_items i{
+    padding-right: 10px;
+  }
+
+  .active{
+    display: block;
+  }
+  .form-update{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-update .gp_input_image{
+    width: 80%;
+  }
+  .form-update .update-form{
+    width: 100%;
+  }
+}                 

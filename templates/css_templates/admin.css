@@ -1,0 +1,629 @@
+/* start csss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+  background-color: #dfe6e9;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  background: #22242a;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 30px;
+}
+
+.left_area h3 {
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span {
+  color: #ee5253;
+}
+
+.logout_btn {
+  padding: 5px;
+  background: #ee5253;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.logout_btn:hover {
+  background: #ee5253;
+}
+
+.sidebar {
+  z-index: 1;
+  top: 0;
+  background: #2f323a;
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 9%);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile_info .profile_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile_info h4 {
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: #ee5253;
+}
+
+.sidebar i {
+  padding-right: 10px;
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: #ee5253;
+}
+
+#check:checked ~ .sidebar {
+  left: -185px;
+}
+
+#check:checked ~ .sidebar a span {
+  display: none;
+}
+
+#check:checked ~ .sidebar a {
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+#check:checked ~ .content {
+  margin-left: 60px;
+}
+
+#check:checked ~ .sidebar .profile_info {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.mobile_nav {
+  display: none;
+}
+.content {
+  width: (100% - 250px);
+  margin-top: 60px;
+  padding: 20px;
+  margin-left: 250px;
+  height: 100%;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+/* CSS ADMIN CONTENT START */
+.content .cajas {
+  width: 100%;
+  height: 30%;
+  color: silver;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.content .cajas .opciones {
+  width: 22%;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  justify-content: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+}
+.content .cajas .opciones .link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.content .cajas .opciones:nth-child(1) {
+  background: #ff4757;
+}
+.content .cajas .opciones:nth-child(2) {
+  background: #ff6348;
+}
+.content .cajas .opciones:nth-child(3) {
+  background: #ffa502;
+}
+.content .cajas .opciones:nth-child(4) {
+  background: #ff6b81;
+}
+.content .cajas .opciones .link .imgcont {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .cajas .opciones .link span {
+  width: 100%;
+  height: 35%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #fff;
+}
+.content .cajas .opciones .link img {
+  width: 90%;
+  height: 90%;
+  opacity: 0.7;
+  padding: 20px;
+}
+/* imgen css */
+/* RESPONSIVE TABLE START */
+.content .tablaLibro {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .tablaLibro table {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 10px;
+}
+.content .tablaLibro table thead th {
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 10px;
+}
+.content .tablaLibro table tbody tr td {
+  padding: 20px;
+  text-align: center;
+}
+.content .tablaLibro table tbody tr td > a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin: 10px;
+}
+/* INPUT IMAGE CSS START */
+.form-update .update-form .gp_input_image {
+  width: 30%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  margin: 20px;
+}
+.form-update .gp_input_image label {
+  width: 100%;
+  height: 10%;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.form-update .gp_input_image input {
+  width: 90%;
+  display: flex;
+  font-size: 1em;
+  height: 10%;
+
+}
+.form-update .show_cover {
+  width: 60%;
+  height: 80%;
+  border-radius: 3px;
+  border: none;
+}
+/* USER PICTURE STYLE */
+.form-update .show_cover_user{
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-update .show_cover_user img{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+/* USER PICTURE STYLE END */
+.form-update .gp_input_image .show_cover img {
+  width: 90%;
+  height: 90%;
+  border-radius: 3px;
+  border: none;
+}
+
+/* IMPUT IMAGE CSS END */
+/* ATRRIBUTE BOOK CSS START */
+.form-update .update-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form-update .update-form .gp_input {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.form-update .update-form .gp_input label {
+  padding-right: 10px;
+  color: #2f3640;
+  font-size: 1.3em;
+  font-weight: 800;
+  width: 30%;
+  letter-spacing: normal;
+}
+.form-update .update-form .gp_input input {
+  width: 60%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #f5f6fa;
+  color: #353b48;
+  text-align: center;
+  font-size: 1em;
+  margin: 10px;
+  transition: 0.5s background;
+}
+.form-update .update-form .gp_input input:focus {
+  color: #2f3640;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+  background: #dcdde1;
+  border: none;
+  -webkit-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
+}
+.form-update .update-form .gp_input select {
+  width: 30%;
+  height: 40%;
+  border-radius: 3px;
+  border: none;
+  background: #dcdde1;
+  font-size: 1.1em;
+  color: #2f3640;
+  font-weight: 600;
+}
+/* ATRIBUTTE BOOK CSS END */
+/* Botton css start */
+.form-update .update-form .botones {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.form-update .update-form button {
+  width: 30%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 20px;
+}
+/* FORM STYLES END */
+/* RESPONSIVE TABLE END */
+/* CSS ADMIN CONTENT END */
+@media screen and (max-width: 780px) {
+  .sidebar {
+    display: none;
+  }
+
+  #sidebar_btn {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0s;
+  }
+
+  #check:checked ~ .content {
+    margin-left: 0;
+  }
+  .mobile_nav {
+    display: block;
+    width: calc(100% - 0%);
+  }
+
+  .nav_bar {
+    background: #222;
+    width: (100% - 0px);
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav_bar .mobile_profile_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav_bar .nav_btn {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  .nav_bar .nav_btn:hover {
+    color: #ee5253;
+  }
+
+  .mobile_nav_items {
+    background: #2f323a;
+    display: none;
+  }
+
+  .mobile_nav_items a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+
+  .mobile_nav_items a:hover {
+    background: #ee5253;
+  }
+
+  .mobile_nav_items i {
+    padding-right: 10px;
+  }
+
+  .active {
+    display: block;
+  }
+}
+@media screen and (max-width: 490px) {
+  .sidebar {
+    display: none;
+  }
+
+  #sidebar_btn {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0s;
+  }
+
+  #check:checked ~ .content {
+    margin-left: 0;
+  }
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    transition: 0.6s;
+  }
+  .mobile_nav {
+    display: block;
+    width: calc(100% - 0%);
+  }
+
+  .nav_bar {
+    background: #222;
+    width: (100% - 0px);
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav_bar .mobile_profile_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav_bar .nav_btn {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  .nav_bar .nav_btn:hover {
+    color: #ee5253;
+  }
+
+  .mobile_nav_items {
+    background: #2f323a;
+    display: none;
+  }
+
+  .mobile_nav_items a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+
+  .mobile_nav_items a:hover {
+    background: #ee5253;
+  }
+
+  .mobile_nav_items i {
+    padding-right: 10px;
+  }
+
+  .active {
+    display: block;
+  }
+  .content .cajas .opciones {
+    width: 100%;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: colum;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+  }
+  .content .cajas .opciones .link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .content .cajas .formularios {
+    width: 100%;
+    height: 300px;
+    background: #ff4757;
+    margin: 10px;
+    border-radius: 20px;
+  }
+  .content .cajas .reservas {
+    width: 100%;
+    height: 300px;
+    background: #7bed9f;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .content .tablaLibro {
+    overflow-y: visible;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content .tablaLibro table {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  .content .tablaLibro table thead th {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .content .tablaLibro table tbody tr td {
+    padding: 10px;
+    text-align: center;
+  }
+  .content .tablaLibro table tbody tr td > a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 10px;
+  }
+}

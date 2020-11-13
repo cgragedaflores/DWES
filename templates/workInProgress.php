@@ -4,7 +4,9 @@ include('../header.php');
 ?>
 <div class="content">
     <div class="work-progress">
+    <span>The developer is working on it</span>
     </div>
+    
 </div>
 <script type="text/javascript">
     $(document).ready(function() {

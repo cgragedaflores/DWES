@@ -163,154 +163,59 @@ label #sidebar_btn:hover {
 
 /* FORM STYLES START */
 /* CSS FORM START */
-.content .form-update {
-  width: 90%;
-  background: #dcdde1;
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  -webkit-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-}
-/* INPUT IMAGE CSS START */
-.form-update .update-form .gp_input_image {
-  width: 30%;
-  height: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f6fa;
-  margin: 20px;
-}
-.form-update .gp_input_image label {
-  width: 100%;
-  height: 10%;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-align: center;
-}
-.form-update .gp_input_image input {
-  width: 90%;
-  display: flex;
-  font-size: 1em;
-  height: 10%;
-}
-.form-update .show_cover {
-  width: 60%;
-  height: 80%;
-  border-radius: 3px;
-  border: none;
-}
-/* USER PICTURE STYLE */
-.form-update .show_cover_user {
-  width: 60%;
-  height: 70%;
-  border-radius: 50%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form-update .show_cover_user img {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-}
-/* USER PICTURE STYLE END */
-.form-update .gp_input_image .show_cover img {
-  width: 90%;
-  height: 90%;
-  border-radius: 3px;
-  border: none;
-}
-
-/* IMPUT IMAGE CSS END */
-/* ATRRIBUTE BOOK CSS START */
-.form-update .update-form {
+.content .centrarForm{
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
-
-.form-update .update-form .gp_input {
+.content form {
   width: 70%;
-  height: 15%;
+  height: auto;
+  background: #ced6e0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-}
-.form-update .update-form .gp_input label {
-  padding-right: 10px;
-  color: #2f3640;
-  font-size: 1.3em;
-  font-weight: 800;
-  width: 30%;
-  letter-spacing: normal;
-}
-.form-update .update-form .gp_input input {
-  width: 60%;
-  height: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  background: #f5f6fa;
-  color: #353b48;
-  text-align: center;
-  font-size: 1em;
-  margin: 10px;
-  transition: 0.5s background;
-}
-.form-update .update-form .gp_input input:focus {
-  color: #2f3640;
-  font-size: 1.1em;
-  font-weight: 700;
-  text-align: center;
-  background: #dcdde1;
-  border: none;
-  -webkit-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: -5px 2px 25px -3px rgba(0, 0, 0, 0.75);
-}
-.form-update .update-form .gp_input select {
-  width: 30%;
-  height: 40%;
-  border-radius: 3px;
-  border: none;
-  background: #dcdde1;
-  font-size: 1.1em;
-  color: #2f3640;
-  font-weight: 600;
-}
-/* ATRIBUTTE BOOK CSS END */
-/* Botton css start */
-.form-update .update-form .botones {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-}
-.form-update .update-form button {
-  width: 30%;
-  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
   border: none;
   border-radius: 3px;
-  margin: 10px;
-  padding: 20px;
+  -webkit-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+  box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+}
+
+.content form .inputgp {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content form .inputgp label {
+  font-size: 1.3em;
+  color: #2f323a;
+  font-weight: 700;
+}
+
+.content form .inputgp input {
+  width: 50%;
+  height: 25px;
+  background: #ffffff;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  color: #2f3542;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: .3s background;
+}
+.content form .inputgp input:focus{
+  background: #f1f2f6;
+  color: #2f3542;
 }
 /* FORM STYLES END */
 /* CONTENT CSS START */
@@ -474,15 +379,32 @@ label #sidebar_btn:hover {
   .active {
     display: block;
   }
-  .form-update {
+  .content .informationForm {
+    width: 80%;
+    height: auto;
+    background: #ced6e0;
+    padding: 20px;
+    border: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+    box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
   }
-  .form-update .gp_input_image {
-    width: 60%;
-  }
-  .form-update .update-form {
+  .content .informationForm .inputgp{
     width: 100%;
+    height: auto;
+    background: #ced6e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .informationForm .inputgp input {
+    width: 70%;
+    height: 25px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -585,14 +507,36 @@ label #sidebar_btn:hover {
   .active {
     display: block;
   }
-  .form-update {
-    display: flex;
-    flex-direction: column;
-  }
-  .form-update .gp_input_image {
-    width: 80%;
-  }
-  .form-update .update-form {
+  .content .informationForm{
     width: 100%;
+    height: auto;
+    background: #ced6e0;
+    padding: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+    box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
+  }
+  .content .informationForm .inputgp{
+    width: 100%;
+    height: auto;
+    background: #ced6e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .informationForm .inputgp input {
+    width: 90%;
+    height: 25px;
+  }
+  .content .informationForm .botones{
+    width: 100%;
+    height: auto;
   }
 }

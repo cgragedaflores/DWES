@@ -1,76 +1,46 @@
-<?php 
-include('bd_connect_LocalHost.php');   
-include('../templates/header_admin.php');  
+<?php
+include 'bd_connect_LocalHost.php';
+include '../templates/header_admin.php';
 ?>
 <div class="content">
-    <div class="form-update">
-        <form action="bd_update_book.php" class="update-form" autocomplete="off" method="POST">
-            <?php
-
-                include('../forms/bd_connect_LocalHost.php');
-                session_start();
-                if(isset($_POST['enviar'])){
-                    $book_ID = $_POST['id'];
-                    $sql = "SELECT * FROM _33_book where  = $book_ID";
-                    $result = mysqli_query($con, $sql);
-                    if (!empty($result) ) {
-                            $resultado = mysqli_fetch_assoc($result);           
-            ?>
-            <div class="gp_input_image">
-                <label for="">Cover Page</label>
-                <input type="file" name="cover_book" id="">
-                <div class="show_cover">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="gp_input">
-                <label for="">Location</label>
-                <input type="text" name = "localizacion" value="<?php echo $resultado['location_id']; ?>">
-            </div>
-            <div class="gp_input">
-                <label for="">Tittle</label>
-                <input type="text" name = "titulo" value="<?php echo $resultado['tittle']; ?>">
-            </div>
-            <div class="gp_input">
-                <label for="">Author</label>
-                <input type="text" name = "autor" value="<?php echo $resultado['author']; ?>">
-
-            </div>
-            <div class="gp_input">
-                <label for="">ISBN</label>
-                <input type="text" name = "isbn" value="<?php echo $resultado['isbn']; ?>">
-
-            </div>
-            <div class="gp_input">
-                <label for="">Editorial</label>
-                <input type="text" name = "editorial" value="<?php echo $resultado['editorial']; ?>">
-
-            </div>
-            <div class="gp_input">
-                <label for="">Publication Date</label>
-                <input type="date" name = "fecha_publicacion" value="<?php echo $resultado['publication_date']; ?>">
-
-            </div>
-            <div class="gp_input">
-                <label for="">Book Status</label>
-                <select name="estado_libro" id="s_book">
-                    <option value="1">Availible</option>
-                    <option value="0">Not Availible</option>
-
-                </select>
-            </div>
-            <?php
-                    }else{
-                        echo "No funciona";
-                    }
-                }
-                ?>
-            <div class="botones">
-                <input type="hidden" name="libro" value = "<?php echo $resultado['book_id']; ?>">
-                <button type="submit" name = "update">Update</button>
-                <button type="submit" name = "delete">Delete</button>
-            </div>
-        </form>
+    <?php
+if (strlen($_SESSION['username']['address']) < 1) {
+    # code...
+    $_SESSION['username']['address'] = "";
+}
+if (strlen($_SESSION['username']['birthdate']) < 1) {
+    # code...
+    $_SESSION['username']['birthdate'] = "";
+}
+if (strlen($_SESSION['username']['phone_number']) < 1) {
+    # code...
+    $_SESSION['username']['phone_number'] = "";
+}
+?>
+    <div class="centrarForm">
+    <form action="bd_update_profile.php" method="post"  class="informationForm">
+        <div class="inputgp">
+            <label for="">First Name</label>
+            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['first_name']; ?>">
+            <label for="">Last Name</label>
+            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['last_name']; ?>">
+            <label for="">NIF</label>
+            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['nif']; ?>">
+            <label for="">email</label>
+            <input type="email" name="" id="" value="<?php echo $_SESSION['username']['email']; ?>">
+            <label for="">Phone Number</label>
+            <input type="tel" name="" id="" value="<?php echo $_SESSION['username']['phone_number']; ?>">
+            <label for="">BirthDate</label>
+            <input type="date" name="" id="" value="<?php echo $_SESSION['username']['birthdate']; ?>">
+            <label for="">Address</label>
+            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['address']; ?>">
+        </div>
+        <div class="botones">
+            <input type="hidden" name="user_id" value="<?php echo $_SESSION['username']['user_id']; ?>">
+            <button type="submit" name="actualizar">Update</button>
+            <button type="submit" name="changePasswd">Change Password</button>
+        </div>
+    </form>
     </div>
 </div>
 <script type="text/javascript">
@@ -81,5 +51,4 @@ $(document).ready(function() {
 });
 </script>
 </body>
-
 </html>

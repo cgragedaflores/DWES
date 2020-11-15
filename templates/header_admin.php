@@ -60,7 +60,7 @@
         <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-book"></i><span>Book</span></a>
         <a href="http://localhost/33biblioteca_Local/workInProgress.php"><i
                 class="fas fa-folder"></i><span>Documentation</span></a>
-        <a href="http://localhost/33biblioteca_Local/workInProgress.php"><i
+        <a href="http://localhost/33biblioteca_Local/forms/form_update_profile.php"><i
                 class="fas fa-user-cog"></i><span>Profile</span></a>
         <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i
                 class="fas fa-sign-out-alt"></i><span>Exit</span></a>

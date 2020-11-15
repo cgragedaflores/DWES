@@ -1,7 +1,10 @@
 <?php
-  require('../header.php');
-  require('bd_connect_LocalHost.php');
-  
+require('../header.php');
+require('bd_connect_LocalHost.php');
+?>
+<div class="content">
+<?php
+  session_start();
   if(isset($_POST['submit'])){
     $userName = $_POST['user_name'];
     $password = $_POST['password'];
@@ -13,20 +16,21 @@
         $register = mysqli_fetch_array($resultado); 
         if($numRows = mysqli_num_rows($resultado) > 0){
           //Inicio De session
-          session_start();
           //Inicializando sesssion como array
           $_SESSION['username'] = array();
           //Asignando datos a session
+          $_SESSION['username']['user_id'] = $register['user_id'];
           $_SESSION['username']['first_name'] = $register['first_name'];
           $_SESSION['username']['last_name'] = $register['last_name'];
-          //$_SESSION['username']['address'] = $register['address'];
+          $_SESSION['username']['address'] = $register['address'];
+          $_SESSION['username']['nif'] = $register['dni'];
           $_SESSION['username']['email'] = $register['email'];
           $_SESSION['username']['birthdate'] = $register['birthdate'];
           $_SESSION['username']['member_type'] = $register['member_type'];
           $_SESSION['username']['phone_number'] = $register['phone_number'];
-          if($_SESSION['username']['member_type'] == 'bibliotecario'){
+          if($_SESSION['username']['member_type'] == 1){
             header('location: http://localhost/33biblioteca_Local/templates/admin.php');
-          }else if($_SESSION['username']['member_type'] == 'socio'){
+          }else if($_SESSION['username']['member_type'] == 2){
             header('location: http://localhost/33biblioteca_Local/templates/partner.php');
           }
         }else{
@@ -37,14 +41,11 @@
   }
   mysqli_close($con);
 ?>
-<div class="content">
-    <div class="form-update">
-        <form action="<?php $_SERVER['PHP_SELF']?>" class="update-form" autocomplete="on" method="POST">
-            <div class="gp_input">
-                <label for="">User</label>
+    <div class="centrarForm">
+        <form action="<?php $_SERVER['PHP_SELF']?>"  class="informationForm" autocomplete="on" method="POST">
+            <div class="inputgp">
+                <label for="">email</label>
                 <input type="text" value="" name="user_name">
-            </div>
-            <div class="gp_input">
                 <label for="">Password</label>
                 <input type="password" value="" name="password">
             </div>

@@ -10,7 +10,7 @@
     </div>
     <div class="description">
     </div>
-
+    <button>Reservar</button>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {

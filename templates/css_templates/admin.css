@@ -268,12 +268,13 @@ label #sidebar_btn:hover {
 }
 
 .content .tablaLibro table tbody tr td {
-  padding: 20px;
+  max-width: 100px;
+  padding: 10px;
   text-align: center;
 }
 .content .tablaLibro table tbody tr td img{
-  width: 10%;
-  height: 10%;
+  width: 25%;
+  height: 25%;
   border-radius: 50%;
 }
 /* FORM STYLE START */

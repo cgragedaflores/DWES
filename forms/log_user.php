@@ -30,7 +30,7 @@ require('bd_connect_LocalHost.php');
           $_SESSION['username']['phone_number'] = $register['phone_number'];
           if($_SESSION['username']['member_type'] == 1){
             header('location: http://localhost/33biblioteca_Local/templates/admin.php');
-          }else if($_SESSION['username']['member_type'] == 2){
+          }else if($_SESSION['username']['member_type'] == 0){
             header('location: http://localhost/33biblioteca_Local/templates/partner.php');
           }
         }else{

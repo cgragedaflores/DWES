@@ -55,7 +55,7 @@
                     <td><?php echo $mostrar['dni']; ?></td>
                     <td><?php echo $status; ?></td>
                     <td>
-                        <form action="http://localhost/33biblioteca_Local/forms/form_update_profile.php" method="POST">
+                        <form action="http://localhost/33biblioteca_Local/forms/form_user_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['book_id']; ?>">
                             <button type="submit" name='enviar'>Editar</button>
                         </form>

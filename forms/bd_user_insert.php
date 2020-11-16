@@ -13,6 +13,7 @@ if (isset($_POST['register'])) {
     if (mysqli_query($con, $sql_query)) {
         //Success
         echo "datos insertados correctamente";
+        header('Location: log_user.php');
     } else {
         echo "query error" . mysqli_error($con);
     }

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <?php session_start();?>
+  <?php session_start(); ?>
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
@@ -31,10 +31,10 @@
       <i class="fa fa-bars nav_btn"></i>
     </div>
     <div class="mobile_nav_items">
-      <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i class="fas fa-user-plus"></i><span>Book</span></a>
-      <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
-      <a href="http://localhost/33biblioteca_Local/plates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
+    <a href="http://localhost/33biblioteca_Local/templates/partner.php"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
     </div>
   </div>
@@ -45,10 +45,10 @@
       <img src="http://localhost/33biblioteca_Local/img/user.png" class="profile_image" alt="">
       <h4><?php echo $_SESSION['username']['first_name']; ?></h4>
     </div>
-    <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
-      <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
-      <a href="http://localhost/33biblioteca_Local/plates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
+    <a href="http://localhost/33biblioteca_Local/templates/partner.php"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
+      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
   </div>
   <!--sidebar end-->

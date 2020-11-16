@@ -25,8 +25,9 @@
         <div class="overlay">
             <h4><?php echo $mostrar['tittle']; ?></h4>
             <h4><?php echo $mostrar['author']; ?></h4>
-            <form action="../workInProgress.php" method = "POST">
-                <button type="submit" value = "<?php $mostrar['book_id']?>">Reserve</button>
+            <form action="book_template.php" method = "POST">
+                <input type="hidden" name="book_id" value="<?php $mostrar['book_id']?>">
+                <button type="submit">Reserve</button>
             </form>
         </div>
     </div>

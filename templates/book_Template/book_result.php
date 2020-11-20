@@ -26,8 +26,8 @@
             <h4><?php echo $mostrar['tittle']; ?></h4>
             <h4><?php echo $mostrar['author']; ?></h4>
             <form action="book_template.php" method = "POST">
-                <input type="hidden" name="book_id" value="<?php $mostrar['book_id']?>">
-                <button type="submit">Reserve</button>
+                <input type="hidden" name ="libro" value="<?php echo $mostrar['book_id']; ?>">
+                <button type="submit" name ="reservar" >Reserve</button>
             </form>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 }    
             }
         }else{
-            echo "no funciona bro";
+            echo "no funciona bro envio";
             $con -> close();
         }
     ?>

@@ -1,5 +1,6 @@
 <?php
     include('header_admin.php');
+    if(isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1){
 ?>
 <div class="content">
     <div class="cajas">
@@ -69,6 +70,10 @@
         </table>
     </div>
 </div>
+            <?php }else{
+                header('Location: ../index.php');
+            }
+            ?>
 <script type="text/javascript">
 $(document).ready(function() {
     $('.nav_btn').click(function() {

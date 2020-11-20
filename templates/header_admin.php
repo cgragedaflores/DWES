@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +15,6 @@
 </head>
 
 <body>
-    <?php 
-        session_start();
-        
-      ?>
     <input type="checkbox" id="check">
     <!--header area start-->
     <header>
@@ -42,7 +41,7 @@
                     class="fas fa-folder"></i><span>Documentation</span></a>
             <a href="http://localhost/33biblioteca_Local/plates/workInProgress.php"><i
                     class="fas fa-user-cog"></i><span>Profile</span></a>
-            <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i
+            <a href="../forms/log_out.php"><i
                     class="fas fa-sign-out-alt"></i><span>Exit</span></a>
         </div>
     </div>
@@ -51,7 +50,6 @@
     <div class="sidebar">
         <div class="profile_info">
             <img src="http://localhost/33biblioteca_Local/img/user.png" class="profile_image" alt="">
-
             <h4><?php echo $_SESSION['username']['first_name']; ?></h4>
         </div>
         <a href="http://localhost/33biblioteca_Local/templates/admin.php"><i class="fas fa-home"></i><span>Home</span></a>
@@ -62,7 +60,7 @@
                 class="fas fa-folder"></i><span>Documentation</span></a>
         <a href="http://localhost/33biblioteca_Local/forms/form_update_profile.php"><i
                 class="fas fa-user-cog"></i><span>Profile</span></a>
-        <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i
+        <a href="http://localhost/33biblioteca_Local/forms/log_out_user.php"><i
                 class="fas fa-sign-out-alt"></i><span>Exit</span></a>
     </div>
     <!--sidebar end-->

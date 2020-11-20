@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="opciones">
-            <a href="adminFiles/user_administration.php" class="link">
+            <a href="#" class="link">
                 <div class="imgcont">
                     <img src="../../img/usuario.svg" alt="">
                 </div>
@@ -56,7 +56,7 @@
                     <td><?php echo $status; ?></td>
                     <td>
                         <form action="http://localhost/33biblioteca_Local/forms/form_user_Action.php" method="POST">
-                            <input type="hidden" name="id" value="<?php echo $mostrar['book_id']; ?>">
+                            <input type="hidden" name="id" value="<?php echo $mostrar['user_id']; ?>">
                             <button type="submit" name='enviar'>Editar</button>
                         </form>
                     </td>

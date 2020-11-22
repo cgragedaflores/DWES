@@ -9,7 +9,7 @@ if (isset($_POST['register'])) {
 
     //Insert user's on BD
     $sql_query = "INSERT into _33_partners(dni,first_name,last_name,email,passwd,member_type,joined_on,partners_status)
-    VALUES('$nif','$name','$last_name','$email','$passwd','Socio',NOW(),0)";
+    VALUES('$nif','$name','$last_name','$email','$passwd','Socio',NOW(),1)";
     if (mysqli_query($con, $sql_query)) {
         //Success
         echo "datos insertados correctamente";

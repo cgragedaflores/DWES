@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto Slab", serif;
-  background-color: #dfe6e9;
+  background: #dfe6e9;
 }
 
 header {
@@ -163,59 +163,66 @@ label #sidebar_btn:hover {
 
 /* FORM STYLES START */
 /* CSS FORM START */
-.content .centrarForm{
+
+.content  .inputForm{
   width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content .inputForm .grupo-input{
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content form {
-  width: 70%;
-  height: auto;
-  background: #ced6e0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  border: none;
-  border-radius: 3px;
-  -webkit-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
-  box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.21);
-}
-
-.content form .inputgp {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.content form .inputgp label {
-  font-size: 1.3em;
-  color: #2f323a;
-  font-weight: 700;
-}
-
-.content form .inputgp input {
-  width: 50%;
-  height: 25px;
-  background: #ffffff;
-  border: none;
-  border-radius: 2px;
+.content .inputForm .grupo-input label{
+  font-family: "Roboto Slab", serif;
+  color: #22242a;
+  font-weight: 600;
+  font-size: 1.4em;
   text-align: center;
-  color: #2f3542;
-  font-size: 1.2em;
-  font-weight: 700;
-  transition: .3s background;
+  width: 50%;
+  height: 5vh;
 }
-.content form .inputgp input:focus{
-  background: #f1f2f6;
-  color: #2f3542;
+.content .inputForm .grupo-input input{
+  border: none;
+  width: 50%;
+  height: 4vh;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, .7);
+  border-bottom: 3px solid #222;
+  transition: .3s border;
+}
+.content .inputForm .grupo-input input[type=text]:focus,
+.content .inputForm .grupo-input input[type=email]:focus,
+.content .inputForm .grupo-input input[type=tel]:focus,
+.content .inputForm .grupo-input input[type=date]:focus{
+  border-bottom: 3px solid #ee5253;
+}
+.botones{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.botones button{
+  width: 10%;
+  height: 50px;
+  border:none;
+  margin: 10px;
+  font-size: 1.3em;
+  color: #ee5253;
+  background: #222;
+  border-radius: 3px;
 }
 /* FORM STYLES END */
 /* CONTENT CSS START */

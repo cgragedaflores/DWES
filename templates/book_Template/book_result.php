@@ -20,15 +20,11 @@
     ?>
     <div class="book">
         <div class="img_containter">
-                <img src="../../img/portadas/Patria.jpg" alt="">
+                <img src="../../img/splatterbook.svg" alt="">
         </div>
         <div class="overlay">
             <h4><?php echo $mostrar['tittle']; ?></h4>
             <h4><?php echo $mostrar['author']; ?></h4>
-            <form action="book_template.php" method = "POST">
-                <input type="hidden" name ="libro" value="<?php echo $mostrar['book_id']; ?>">
-                <button type="submit" name ="reservar" >Reserve</button>
-            </form>
         </div>
     </div>
     <?php 

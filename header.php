@@ -31,7 +31,6 @@
       <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
       <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i class="fas fa-user-plus"></i><span>Register</span></a>
       <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
-      <a href="http://localhost/33biblioteca_Local/plates/workInProgress.php"><i class="fas fa-book"></i><span>Books</span></a>
       <a href="http://localhost/33biblioteca_Local/workInProgress.php"><i class="fas fa-folder"></i><span>Documentation</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-info-circle"></i><span>About</span></a>
     </div>
@@ -42,6 +41,7 @@
     <div class="profile_info">
       <img src="http://localhost/33biblioteca_Local/img/user.png" class="profile_image" alt="">
       <?php
+      session_start();
 if (isset($_SESSION['username']) && ($_SESSION['username']['member_type'] == 1 || $_SESSION['username']['member_type'] == 1)) {
     echo "<h4>" . $_SESSION['username']['first_name'] . "</h4>";
 } else {
@@ -52,7 +52,6 @@ if (isset($_SESSION['username']) && ($_SESSION['username']['member_type'] == 1 |
     <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
     <a href="http://localhost/33biblioteca_Local/forms/form_user_insert.php"><i class="fas fa-user-plus"></i><span>Register</span></a>
     <a href="http://localhost/33biblioteca_Local/forms/log_user.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
-    <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-book"></i><span>Books</span></a>
     <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-folder"></i><span>Documentation</span></a>
     <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-info-circle"></i><span>About</span></a>
   </div>

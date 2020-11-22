@@ -4,44 +4,46 @@ include '../templates/header_admin.php';
 ?>
 <div class="content">
     <?php
-if (strlen($_SESSION['username']['address']) < 1) {
-    # code...
-    $_SESSION['username']['address'] = "";
-}
-if (strlen($_SESSION['username']['birthdate']) < 1) {
-    # code...
-    $_SESSION['username']['birthdate'] = "";
-}
-if (strlen($_SESSION['username']['phone_number']) < 1) {
-    # code...
-    $_SESSION['username']['phone_number'] = "";
+$sql = "SELECT * FROM _33_partners WHERE user_id = '" . $_SESSION['username']['user_id'] . "' ";
+if ($consulta = mysqli_query($con, $sql)) {
+    $fila = mysqli_fetch_assoc($consulta);
 }
 ?>
-    <div class="centrarForm">
-    <form action="bd_update_profile.php" method="post"  class="informationForm">
+    <form action="bd_update_profile.php" method="post" class="informationForm">
         <div class="inputgp">
             <label for="">First Name</label>
-            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['first_name']; ?>">
-            <label for="">Last Name</label>
-            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['last_name']; ?>">
-            <label for="">NIF</label>
-            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['nif']; ?>">
-            <label for="">email</label>
-            <input type="email" name="" id="" value="<?php echo $_SESSION['username']['email']; ?>">
-            <label for="">Phone Number</label>
-            <input type="tel" name="" id="" value="<?php echo $_SESSION['username']['phone_number']; ?>">
-            <label for="">BirthDate</label>
-            <input type="date" name="" id="" value="<?php echo $_SESSION['username']['birthdate']; ?>">
-            <label for="">Address</label>
-            <input type="text" name="" id="" value="<?php echo $_SESSION['username']['address']; ?>">
+            <input type="text" name="first_name" id="" value="<?php echo $fila['first_name'] ?>">
         </div>
+        <div class="inputgp">
+            <label for="">Last Name</label>
+            <input type="text" name="laste_name" id="" value="<?php echo $fila['last_name']; ?>">
+        </div>
+        <div class="inputgp">
+            <label for="">NIF</label>
+            <input type="text" name="nif" id="" value="<?php echo $fila['dni']; ?>">
+        </div>
+        <div class="inputgp">
+            <label for="">email</label>
+        </div>
+        <input type="email" name="email" id="" value="<?php echo $fila['email']; ?>">
+        <div class="inputgp">
+            <label for="">Phone Number</label>
+            <input type="tel" name="phone_number" id="" value="<?php echo $fila['phone_number']; ?>">
+        </div>
+        <div class="inputgp">
+            <label for="">BirthDate</label>
+            <input type="date" name="birthdate" id="" value="<?php echo $fila['birthdate']; ?>">
+        </div>
+        <div class="inputgp">
+            <label for="">Address</label>
+            <input type="text" name="address" id="" value="<?php echo $fila['addres']; ?>">
+        </div>
+
         <div class="botones">
-            <input type="hidden" name="user_id" value="<?php echo $_SESSION['username']['user_id']; ?>">
+            <input type="hidden" name="user_id" value="<?php echo $fila['user_id']; ?>">
             <button type="submit" name="actualizar">Update</button>
-            <button type="submit" name="changePasswd">Change Password</button>
         </div>
     </form>
-    </div>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -51,4 +53,5 @@ $(document).ready(function() {
 });
 </script>
 </body>
+
 </html>

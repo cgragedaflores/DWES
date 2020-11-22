@@ -29,7 +29,10 @@
             </a>
         </div>
     </div>
+    <h3>Book's Recently Added</h3>
+    <a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a>  
     <div class="tablaLibro">
+
         <table>
             <thead>
                 <th>Title</th>

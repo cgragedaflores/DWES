@@ -21,7 +21,7 @@
         }
         $con -> close();
     }
-    if (isset($_POST['eliminarþ'])) {
+    if (isset($_POST['eliminar'])) {
         # code...
         $user_id = $_POST['user_id'];
         $sql = "DELETE FROM  _33_partners where user_id = '$user_id' ";

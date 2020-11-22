@@ -32,7 +32,7 @@
     </div>
     <div class="mobile_nav_items">
     <a href="http://localhost/33biblioteca_Local/templates/partner.php"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
+      <a href="http://localhost/33biblioteca_Local/main_content.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
@@ -48,7 +48,7 @@
     <a href="http://localhost/33biblioteca_Local/templates/partner.php"><i class="fas fa-home"></i><span>Home</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-book-reader"></i><span>Books</span></a>
       <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-cart-arrow-down"></i><span>Bookings</span></a>
-      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
+      <a href="http://localhost/33biblioteca_Local/forms/form_update_profile.php"><i class="fas fa-user-cog"></i></i><span>Profile</span></a>
       <a href="../forms/log_out_user.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
   </div>
   <!--sidebar end-->

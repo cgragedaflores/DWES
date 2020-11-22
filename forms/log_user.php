@@ -3,8 +3,7 @@ require('../header.php');
 require('bd_connect_LocalHost.php');
 ?>
 <div class="content">
-<?php
-  session_start();
+    <?php
   if(isset($_POST['submit'])){
     $userName = $_POST['user_name'];
     $password = $_POST['password'];
@@ -41,19 +40,19 @@ require('bd_connect_LocalHost.php');
   }
   mysqli_close($con);
 ?>
-    <div class="centrarForm">
-        <form action="<?php $_SERVER['PHP_SELF']?>"  class="informationForm" autocomplete="on" method="POST">
-            <div class="inputgp">
-                <label for="">email</label>
-                <input type="text" value="" name="user_name">
-                <label for="">Password</label>
-                <input type="password" value="" name="password">
-            </div>
-            <div class="botones">
-                <button type="submit" name = "submit">Login</button>
-            </div>
-        </form>
-    </div>
+    <form action="<?php $_SERVER['PHP_SELF']?>" class="inputForm" autocomplete="off" method="POST">
+        <div class="grupo-input">
+            <label for="">email</label>
+            <input type="text" value="" name="user_name">
+        </div>
+        <div class="grupo-input">
+            <label for="">Password</label>
+            <input type="password" value="" name="password">
+        </div>
+        <div class="botones">
+            <button type="submit" name="submit">Login</button>
+        </div>
+    </form>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {

@@ -204,7 +204,8 @@ label #sidebar_btn:hover {
 .content .inputForm .grupo-input input[type=text]:focus,
 .content .inputForm .grupo-input input[type=email]:focus,
 .content .inputForm .grupo-input input[type=tel]:focus,
-.content .inputForm .grupo-input input[type=date]:focus{
+.content .inputForm .grupo-input input[type=date]:focus,
+.content .inputForm .grupo-input input[type=password]:focus{
   border-bottom: 3px solid #ee5253;
 }
 .botones{

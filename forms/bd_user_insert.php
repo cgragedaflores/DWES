@@ -1,5 +1,6 @@
 <?php
-include('bd_connect_LocalHost.php');
+session_start();
+include 'bd_connect_LocalHost.php';
 if (isset($_POST['register'])) {
     $nif = $_POST["u_nif"];
     $name = $_POST["u_name"];
@@ -12,10 +13,14 @@ if (isset($_POST['register'])) {
     VALUES('$nif','$name','$last_name','$email','$passwd','Socio',NOW(),1)";
     if (mysqli_query($con, $sql_query)) {
         //Success
-        echo "datos insertados correctamente";
-        header('Location: log_user.php');
+        if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
+            echo "datos insertados correctamente";
+            echo "<a href = "."../templates/admin.php"." >Volver al Inicio</a>";
+
+        } else {
+            header('Location: log_user.php');
+        }
     } else {
         echo "query error" . mysqli_error($con);
     }
 }
-?>

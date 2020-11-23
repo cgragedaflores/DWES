@@ -28,8 +28,10 @@
             </a>
         </div>
     </div>
+    <h3><a href="http://localhost/33biblioteca_Local/forms/form_user_insert.php">Add User</a></h3>
     <div class="tablaLibro">
         <table>
+            <caption><h3>Registered users</h3></caption>
             <thead>
                 <th>Picture</th>
                 <th>Email</th>
@@ -50,10 +52,10 @@
                             }
                 ?>
                 <tr>
-                    <td><img src="../../img/user.png" alt=""></td>
-                    <td><?php echo $mostrar['email']; ?></td>
-                    <td><?php echo $mostrar['dni']; ?></td>
-                    <td><?php echo $status; ?></td>
+                    <td data-label="Profile Image"><img src="../../img/user.png" alt=""></td>
+                    <td data-label="Email"><?php echo $mostrar['email']; ?></td>
+                    <td data-label="Nif"><?php echo $mostrar['dni']; ?></td>
+                    <td data-label="Status"><?php echo $status; ?></td>
                     <td>
                         <form action="http://localhost/33biblioteca_Local/forms/form_user_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['user_id']; ?>">

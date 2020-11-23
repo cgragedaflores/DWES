@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Ubuntu', sans-serif;
   background: #dfe6e9;
 }
 
@@ -136,7 +136,7 @@ label #sidebar_btn:hover {
   margin-top: 60px;
   padding: 20px;
   margin-left: 250px;
-  max-height: 100vh;
+  max-height: 100%;
   transition: 0.5s;
   display: flex;
   flex-direction: row;
@@ -236,9 +236,18 @@ label #sidebar_btn:hover {
   opacity: 0.7;
   padding: 20px;
 }
-
-/* imgen css */
-
+.content h3{
+  font-size: 1.3em;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  margin: auto;
+  color: #222;
+}
+.content a{
+  text-decoration: none;
+  text-align: center;
+  color: #222;
+}
 /* RESPONSIVE TABLE START */
 
 .content .tablaLibro {
@@ -266,13 +275,13 @@ label #sidebar_btn:hover {
   text-align: center;
   color: #ee5253;
 }
-
 .content .tablaLibro table tbody tr td {
     width: 20%;
     height: auto;
     text-align: center;
     padding: 5px;
 }
+
 .content .tablaLibro table tbody tr td button{
   width: 50%;
   height: 50px;
@@ -340,7 +349,8 @@ label #sidebar_btn:hover {
 .content .inputForm .grupo-input input[type=text]:focus,
 .content .inputForm .grupo-input input[type=email]:focus,
 .content .inputForm .grupo-input input[type=tel]:focus,
-.content .inputForm .grupo-input input[type=date]:focus{
+.content .inputForm .grupo-input input[type=date]:focus,
+.content .inputForm .grupo-input input[type=password]:focus{
   border-bottom: 3px solid #ee5253;
 }
 .botones{
@@ -573,58 +583,44 @@ label #sidebar_btn:hover {
     margin: 10px;
     border-radius: 10px;
   }
-  .content .tablaLibro {
-    overflow-y: visible;
-    width: 90%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .content .tablaLibro table {
+  .content .tablaLibro{
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 2px solid black;
   }
-  .content .tablaLibro table thead th {
-    font-size: 1em;
-    font-weight: 600;
-  }
-  .content .tablaLibro table tbody tr td {
-    padding: 10px;
-    text-align: center;
-  }
-  .content .tablaLibro table tbody tr td>a {
-    color: black;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 10px;
-  }
-  .content  .inputForm{
+  .content .tablaLibro table{
+    border: 0px;
     width: 100%;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
-  .content .inputForm .grupo-input{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .botones button{
-    width: 25%;
-    height: 50px;
-    border:none;
-    margin: 10px;
+  .content .tablaLibro table caption{
     font-size: 1.3em;
-    color: #ee5253;
-    background: #222;
-    border-radius: 3px;
+  }
+  .content .tablaLibro table thead{
+    display: none;
+  }
+  .content .tablaLibro table tbody tr{
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 4px solid #DDD;
+    display: block;
+  }
+  .content .tablaLibro table tbody tr td{
+    width: 90%;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .content .tablaLibro table tbody tr td::before{
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 1.3em;
+    float: left;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .content .tablaLibro table tbody td:hover{
+    background-color: #ee5253;
   }
 }

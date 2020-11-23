@@ -1,4 +1,10 @@
-<?php include('../header.php');?>
+<?php
+ if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
+    require '../templates/header_admin.php';
+ }else{
+     require '../header.php';
+ }
+?>
 <div class="content">
     <form action="bd_user_insert.php" class="inputForm" autocomplete="off" method="POST">
         <div class="grupo-input">
@@ -25,9 +31,8 @@
             <button type="submit" name="register">Register</button>
         </div>
     </form>
-
-
 </div>
+
 <script type="text/javascript">
 $(document).ready(function() {
     $('.nav_btn').click(function() {

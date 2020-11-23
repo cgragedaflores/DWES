@@ -1,6 +1,6 @@
 <?php
     include('bd_connect_LocalHost.php');
-    if(isset($_POST['update'])){
+    if(isset($_POST['actualizar'])){
         $location = $_POST['localizacion'];
         $book_ID = $_POST['libro'];
         $tittle = $_POST['titulo'];
@@ -21,7 +21,7 @@
         }
         $con -> close();
     }
-    if (isset($_POST['delete'])) {
+    if (isset($_POST['eliminar'])) {
         # code...
         $book_ID = $_POST['libro'];
         $sql = "DELETE FROM  _33_book where book_id = '$book_ID' ";

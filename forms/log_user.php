@@ -4,16 +4,17 @@ require('bd_connect_LocalHost.php');
 ?>
 <div class="content">
     <?php
-  if(isset($_POST['submit'])){
+  if(isset($_POST['entrar'])){
     $userName = $_POST['user_name'];
-    $password = $_POST['password'];
+    $password = $_POST['passwd'];
     if(strlen($userName) < 1 && strlen($password) < 1){
         echo "Por favor compruebe los  datos Correctos";
     }else{
-      $query = "SELECT * FROM _33_partners where email = '$userName' && passwd = '$password'";
+      $query = "SELECT * FROM _33_partners where email = '$userName' && passwd = '$password' ";
       if($resultado = mysqli_query($con,$query)){     
-        $register = mysqli_fetch_array($resultado); 
+        $register = mysqli_fetch_array($resultado);
         if($numRows = mysqli_num_rows($resultado) > 0){
+         
           //Inicio De session
           //Inicializando sesssion como array
           $_SESSION['username'] = array();
@@ -47,10 +48,10 @@ require('bd_connect_LocalHost.php');
         </div>
         <div class="grupo-input">
             <label for="">Password</label>
-            <input type="password" value="" name="password">
+            <input type="password" value="" name="passwd">
         </div>
         <div class="botones">
-            <button type="submit" name="submit">Login</button>
+            <button type="submit" name="entrar">Login</button>
         </div>
     </form>
 </div>

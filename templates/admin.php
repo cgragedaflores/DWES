@@ -1,7 +1,7 @@
 <?php
 include 'header_admin.php';
 if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
-    ?>
+?>
 <div class="content">
     <div class="cajas">
         <div class="opciones">
@@ -29,11 +29,12 @@ if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
             </a>
         </div>
     </div>
-    <h3>Book's Recently Added</h3>
-    <a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a>
+    
+    <h3><a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a></h3>
     <div class="tablaLibro">
 
         <table>
+            <caption><h3>Book's Recently Added</h3></caption>
             <thead>
                 <th>Title</th>
                 <th>isbn</th>
@@ -54,10 +55,10 @@ include '../forms/bd_connect_LocalHost.php';
             }
             ?>
                 <tr>
-                    <td><?php echo $mostrar['tittle']; ?></td>
-                    <td><?php echo $mostrar['isbn']; ?></td>
-                    <td><?php echo $mostrar['author']; ?></td>
-                    <td><?php echo $status; ?></td>
+                    <td data-label = "Title"><?php echo $mostrar['tittle']; ?></td>
+                    <td data-label = "Isbn"><?php echo $mostrar['isbn']; ?></td>
+                    <td data-label = "Author"><?php echo $mostrar['author']; ?></td>
+                    <td data-label = "Status"><?php echo $status; ?></td>
                     <td>
                         <form action="http://localhost/33biblioteca_Local/forms/form_book_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['book_id']; ?>">

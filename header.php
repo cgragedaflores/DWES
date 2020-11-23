@@ -42,11 +42,11 @@
       <img src="http://localhost/33biblioteca_Local/img/user.png" class="profile_image" alt="">
       <?php
       session_start();
-if (isset($_SESSION['username']) && ($_SESSION['username']['member_type'] == 1 || $_SESSION['username']['member_type'] == 1)) {
-    echo "<h4>" . $_SESSION['username']['first_name'] . "</h4>";
-} else {
-    echo "<h4>GEST</h4>";
-}
+      if (isset($_SESSION['username']) && ($_SESSION['username']['member_type'] == 1 || $_SESSION['username']['member_type'] == 0)) {
+        session_destroy();
+      } else {
+          echo "<h4>GEST</h4>";
+      }
 ?>
     </div>
     <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>

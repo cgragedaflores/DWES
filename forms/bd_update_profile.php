@@ -13,9 +13,12 @@
         dni = '$nif', email = '$email', phone_number = '$tel', birthdate = '$birthdate',
         addres = '$addres' WHERE user_id = '$user_id' ";
         if ($con -> query($sql) == true) {
-            # code...
-            echo "Record updated successfully";
-            header('location: ../templates/admin.php');
+            if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
+                header('location: ../templates/partner.php');
+            } else {
+                header('location: ../templates/admin.php');
+            }
+           
         }else{
             echo "Error Updating ".$con -> error;
         }
@@ -27,7 +30,6 @@
         $sql = "DELETE FROM  _33_partners where user_id = '$user_id' ";
         if ($con -> query($sql) == true) {
             # code...
-            echo "Record deleted successfully";
             header('location: ../templates/admin.php');
         }else{
             echo "Error deleting".$con -> error;

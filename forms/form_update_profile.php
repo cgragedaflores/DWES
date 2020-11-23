@@ -9,32 +9,32 @@ if ($consulta = mysqli_query($con, $sql)) {
     $fila = mysqli_fetch_assoc($consulta);
 }
 ?>
-    <form action="bd_update_profile.php" method="post" class="informationForm">
-        <div class="inputgp">
+    <form action="bd_update_profile.php" method="post" class="inputForm">
+        <div class="grupo-input">
             <label for="">First Name</label>
             <input type="text" name="first_name" id="" value="<?php echo $fila['first_name'] ?>">
         </div>
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">Last Name</label>
             <input type="text" name="laste_name" id="" value="<?php echo $fila['last_name']; ?>">
         </div>
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">NIF</label>
             <input type="text" name="nif" id="" value="<?php echo $fila['dni']; ?>">
         </div>
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">email</label>
+            <input type="email" name="email" id="" value="<?php echo $fila['email']; ?>">
         </div>
-        <input type="email" name="email" id="" value="<?php echo $fila['email']; ?>">
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">Phone Number</label>
             <input type="tel" name="phone_number" id="" value="<?php echo $fila['phone_number']; ?>">
         </div>
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">BirthDate</label>
             <input type="date" name="birthdate" id="" value="<?php echo $fila['birthdate']; ?>">
         </div>
-        <div class="inputgp">
+        <div class="grupo-input">
             <label for="">Address</label>
             <input type="text" name="address" id="" value="<?php echo $fila['addres']; ?>">
         </div>

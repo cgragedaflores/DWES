@@ -1,7 +1,7 @@
 <?php
-    include('header_admin.php');
-    if(isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1){
-?>
+include 'header_admin.php';
+if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
+    ?>
 <div class="content">
     <div class="cajas">
         <div class="opciones">
@@ -30,7 +30,7 @@
         </div>
     </div>
     <h3>Book's Recently Added</h3>
-    <a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a>  
+    <a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a>
     <div class="tablaLibro">
 
         <table>
@@ -43,16 +43,16 @@
             </thead>
             <tbody>
                 <?php
-                    include('../forms/bd_connect_LocalHost.php');
-                    $sql = "SELECT * FROM _33_book order by inserted_on ";
-                    if ($result = mysqli_query($con, $sql)) {
-                        while ($mostrar = mysqli_fetch_array($result)) {
-                            if($status = $mostrar['book_status'] == 1){
-                                $status = "Available";
-                            }else{
-                                $status = "Not Available";
-                            }
-                ?>
+include '../forms/bd_connect_LocalHost.php';
+    $sql = "SELECT * FROM _33_book order by inserted_on ";
+    if ($result = mysqli_query($con, $sql)) {
+        while ($mostrar = mysqli_fetch_array($result)) {
+            if ($status = $mostrar['book_status'] == 1) {
+                $status = "Available";
+            } else {
+                $status = "Not Available";
+            }
+            ?>
                 <tr>
                     <td><?php echo $mostrar['tittle']; ?></td>
                     <td><?php echo $mostrar['isbn']; ?></td>
@@ -61,22 +61,22 @@
                     <td>
                         <form action="http://localhost/33biblioteca_Local/forms/form_book_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['book_id']; ?>">
-                            <button type="submit" name='enviar'>Editar</button>
+                            <button type="submit" name='enviar'><i class="fas fa-pen"></i></button>
                         </form>
                     </td>
                 </tr>
                 <?php
-                        }
-                }
-                ?>
+}
+    }
+    ?>
             </tbody>
         </table>
     </div>
 </div>
-            <?php }else{
-                header('Location: ../index.php');
-            }
-            ?>
+<?php } else {
+    header('Location: ../index.php');
+}
+?>
 <script type="text/javascript">
 $(document).ready(function() {
     $('.nav_btn').click(function() {

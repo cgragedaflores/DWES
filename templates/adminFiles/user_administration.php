@@ -57,7 +57,7 @@
                     <td>
                         <form action="http://localhost/33biblioteca_Local/forms/form_user_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['user_id']; ?>">
-                            <button type="submit" name='enviar'>Editar</button>
+                            <button type="submit" name='enviar'><i class="fas fa-user-edit"></i></button>
                         </form>
                     </td>
                 </tr>

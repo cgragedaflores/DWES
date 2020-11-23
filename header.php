@@ -28,11 +28,11 @@
       <i class="fa fa-bars nav_btn"></i>
     </div>
     <div class="mobile_nav_items">
-      <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i class="fas fa-user-plus"></i><span>Register</span></a>
-      <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
-      <a href="http://localhost/33biblioteca_Local/workInProgress.php"><i class="fas fa-folder"></i><span>Documentation</span></a>
-      <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-info-circle"></i><span>About</span></a>
+    <a href="http://localhost/33biblioteca_Local/"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="http://localhost/33biblioteca_Local/forms/form_user_insert.php"><i class="fas fa-user-plus"></i><span>Register</span></a>
+    <a href="http://localhost/33biblioteca_Local/forms/log_user.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+    <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-folder"></i><span>Documentation</span></a>
+    <a href="http://localhost/33biblioteca_Local/templates/workInProgress.php"><i class="fas fa-info-circle"></i><span>About</span></a>
     </div>
   </div>
   <!--mobile navigation bar end-->

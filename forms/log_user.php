@@ -28,8 +28,10 @@ require('bd_connect_LocalHost.php');
           $_SESSION['username']['birthdate'] = $register['birthdate'];
           $_SESSION['username']['member_type'] = $register['member_type'];
           $_SESSION['username']['phone_number'] = $register['phone_number'];
+          // VALUE 1 ADMINISTRATOR
           if($_SESSION['username']['member_type'] == 1){
             header('location: http://localhost/33biblioteca_Local/templates/admin.php');
+          // VALUE 0 PARTNER
           }else if($_SESSION['username']['member_type'] == 0){
             header('location: http://localhost/33biblioteca_Local/templates/partner.php');
           }

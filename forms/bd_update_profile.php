@@ -3,7 +3,7 @@
     if (isset($_POST['actualizar'])) {
         $user_id = $_POST['user_id'];
         $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
+        $last_name = $_POST['laste_name'];
         $nif = $_POST['nif'];
         $email = $_POST['email'];
         $tel = $_POST['phone_number'];

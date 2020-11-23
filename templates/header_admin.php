@@ -33,15 +33,16 @@ session_start();
             <i class="fa fa-bars nav_btn"></i>
         </div>
         <div class="mobile_nav_items">
-            <a href="http://localhost/33biblioteca_Local/templates/admin.php"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="http://localhost/33biblioteca_Local/templates/admin.php"><i
+                    class="fas fa-home"></i><span>Home</span></a>
             <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i
                     class="fab fa-wpforms"></i><span>Forms</span></a>
             <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-book"></i><span>Book</span></a>
             <a href="http://localhost/33biblioteca_Local/workInProgress.php"><i
                     class="fas fa-folder"></i><span>Documentation</span></a>
-            <a href="http://localhost/33biblioteca_Local/plates/workInProgress.php"><i
+            <a href="http://localhost/33biblioteca_Local/forms/form_update_profile.php"><i
                     class="fas fa-user-cog"></i><span>Profile</span></a>
-            <a href="../forms/log_out.php"><i
+            <a href="http://localhost/33biblioteca_Local/forms/log_out_user.php"><i
                     class="fas fa-sign-out-alt"></i><span>Exit</span></a>
         </div>
     </div>
@@ -52,7 +53,8 @@ session_start();
             <img src="http://localhost/33biblioteca_Local/img/user.png" class="profile_image" alt="">
             <h4><?php echo $_SESSION['username']['first_name']; ?></h4>
         </div>
-        <a href="http://localhost/33biblioteca_Local/templates/admin.php"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="http://localhost/33biblioteca_Local/templates/admin.php"><i
+                class="fas fa-home"></i><span>Home</span></a>
         <a href="http://localhost/33biblioteca_Local/form_user_insert.php"><i
                 class="fab fa-wpforms"></i><span>Forms</span></a>
         <a href="http://localhost/33biblioteca_Local/log_user.php"><i class="fas fa-book"></i><span>Book</span></a>

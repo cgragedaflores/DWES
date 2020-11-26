@@ -23,6 +23,11 @@ header {
   font-weight: 900;
 }
 
+.left_area h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .left_area span {
   color: #ee5253;
 }
@@ -117,15 +122,15 @@ label #sidebar_btn:hover {
   color: #ee5253;
 }
 
-#check:checked ~ .sidebar {
+#check:checked~.sidebar {
   left: -185px;
 }
 
-#check:checked ~ .sidebar a span {
+#check:checked~.sidebar a span {
   display: none;
 }
 
-#check:checked ~ .sidebar a {
+#check:checked~.sidebar a {
   font-size: 20px;
   margin-left: 165px;
   width: 100%;
@@ -145,11 +150,12 @@ label #sidebar_btn:hover {
   align-items: center;
   overflow-x: hidden;
 }
-#check:checked ~ .content {
+
+#check:checked~.content {
   margin-left: 60px;
 }
 
-#check:checked ~ .sidebar .profile_info {
+#check:checked~.sidebar .profile_info {
   display: none;
 }
 
@@ -236,18 +242,21 @@ label #sidebar_btn:hover {
   opacity: 0.7;
   padding: 20px;
 }
-.content h3{
+
+.content h3 {
   font-size: 1.3em;
   font-family: 'Ubuntu', sans-serif;
   padding: 10px;
   margin: auto;
   color: #222;
 }
-.content a{
+
+.content a {
   text-decoration: none;
   text-align: center;
   color: #222;
 }
+
 /* RESPONSIVE TABLE START */
 
 .content .tablaLibro {
@@ -275,29 +284,32 @@ label #sidebar_btn:hover {
   text-align: center;
   color: #ee5253;
 }
+
 .content .tablaLibro table tbody tr td {
-    width: 20%;
-    height: auto;
-    text-align: center;
-    padding: 5px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  padding: 5px;
 }
 
-.content .tablaLibro table tbody tr td button{
+.content .tablaLibro table tbody tr td button {
   width: 50%;
   height: 50px;
-  border:none;
+  border: none;
   margin: 10px;
   font-size: 1.3em;
   color: #ee5253;
   background: #222;
   border-radius: 3px;
 }
-.content .tablaLibro table tbody tr td img{
+
+.content .tablaLibro table tbody tr td img {
   width: 15%;
   height: 15%;
   border-radius: 50%;
 }
-.content  .inputForm{
+
+.content .inputForm {
   width: 100%;
   max-height: 100%;
   display: flex;
@@ -306,14 +318,16 @@ label #sidebar_btn:hover {
   justify-content: center;
   align-items: center;
 }
-.content .inputForm .grupo-input{
+
+.content .inputForm .grupo-input {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content .inputForm .grupo-input label{
+
+.content .inputForm .grupo-input label {
   font-family: "Roboto Slab", serif;
   color: #22242a;
   font-weight: 600;
@@ -322,7 +336,8 @@ label #sidebar_btn:hover {
   width: 50%;
   height: 5vh;
 }
-.content .inputForm .grupo-input input{
+
+.content .inputForm .grupo-input input {
   border: none;
   width: 50%;
   height: 4vh;
@@ -334,7 +349,8 @@ label #sidebar_btn:hover {
   border-bottom: 3px solid #222;
   transition: .3s border;
 }
-.content .inputForm .grupo-input select{
+
+.content .inputForm .grupo-input select {
   border: none;
   width: 50%;
   height: 4vh;
@@ -346,30 +362,29 @@ label #sidebar_btn:hover {
   border-bottom: 3px solid #222;
   transition: .3s border;
 }
-.content .inputForm .grupo-input input[type=text]:focus,
-.content .inputForm .grupo-input input[type=email]:focus,
-.content .inputForm .grupo-input input[type=tel]:focus,
-.content .inputForm .grupo-input input[type=date]:focus,
-.content .inputForm .grupo-input input[type=password]:focus{
+
+.content .inputForm .grupo-input input[type=text]:focus, .content .inputForm .grupo-input input[type=email]:focus, .content .inputForm .grupo-input input[type=tel]:focus, .content .inputForm .grupo-input input[type=date]:focus, .content .inputForm .grupo-input input[type=password]:focus {
   border-bottom: 3px solid #ee5253;
 }
-.botones{
+
+.botones {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.botones button{
+
+.botones button {
   width: 10%;
   height: 50px;
-  border:none;
+  border: none;
   margin: 10px;
   font-size: 1.3em;
   color: #ee5253;
   background: #222;
   border-radius: 3px;
 }
+
 /* FORM STYLE START */
 
 /* FORM STYLES END */
@@ -382,14 +397,35 @@ label #sidebar_btn:hover {
   .sidebar {
     display: none;
   }
-  #sidebar_btn {
-    display: none;
-  }
   .content {
     margin-left: 0;
     margin-top: 0;
     padding: 10px 20px;
-    transition: 0s;
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .book {
+    width: 70%;
+    height: 10%;
+    margin: 10px;
+  }
+  .content .book .img_containter {
+    width: 100%;
+    height: 70%;
+  }
+  .content .book .img_containter img {
+    width: 100%;
+    height: auto;
+  }
+  .content .book .overlay {
+    width: 100%;
+  }
+  #sidebar_btn {
+    display: none;
   }
   #check:checked~.content {
     margin-left: 0;
@@ -446,7 +482,7 @@ label #sidebar_btn:hover {
   .active {
     display: block;
   }
-  .content  .inputForm{
+  .content .inputForm {
     width: 100%;
     max-height: 100%;
     display: flex;
@@ -455,17 +491,17 @@ label #sidebar_btn:hover {
     justify-content: center;
     align-items: center;
   }
-  .content .inputForm .grupo-input{
+  .content .inputForm .grupo-input {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .botones button{
+  .botones button {
     width: 25%;
     height: 50px;
-    border:none;
+    border: none;
     margin: 10px;
     font-size: 1.3em;
     color: #ee5253;
@@ -478,23 +514,38 @@ label #sidebar_btn:hover {
   .sidebar {
     display: none;
   }
-  #sidebar_btn {
-    display: none;
-  }
-  .content {
-    margin-left: 0;
-    margin-top: 0;
-    padding: 10px 20px;
-    transition: 0s;
-  }
-  #check:checked~.content {
-    margin-left: 0;
-  }
   .content {
     margin-left: 0;
     margin-top: 0;
     padding: 10px 20px;
     transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .book {
+    width: 70%;
+    height: 10%;
+    margin: 10px;
+  }
+  .content .book .img_containter {
+    width: 100%;
+    height: 70%;
+  }
+  .content .book .img_containter img {
+    width: 100%;
+    height: auto;
+  }
+  .content .book .overlay {
+    width: 100%;
+  }
+  #sidebar_btn {
+    display: none;
+  }
+  #check:checked~.content {
+    margin-left: 0;
   }
   .mobile_nav {
     display: block;
@@ -583,26 +634,26 @@ label #sidebar_btn:hover {
     margin: 10px;
     border-radius: 10px;
   }
-  .content .tablaLibro{
+  .content .tablaLibro {
     width: 100%;
   }
-  .content .tablaLibro table{
+  .content .tablaLibro table {
     border: 0px;
     width: 100%;
   }
-  .content .tablaLibro table caption{
+  .content .tablaLibro table caption {
     font-size: 1.3em;
   }
-  .content .tablaLibro table thead{
+  .content .tablaLibro table thead {
     display: none;
   }
-  .content .tablaLibro table tbody tr{
+  .content .tablaLibro table tbody tr {
     width: 100%;
     margin-bottom: 8px;
     border-bottom: 4px solid #DDD;
     display: block;
   }
-  .content .tablaLibro table tbody tr td{
+  .content .tablaLibro table tbody tr td {
     width: 90%;
     font-size: 12px;
     display: block;
@@ -612,7 +663,7 @@ label #sidebar_btn:hover {
     font-weight: 600;
     font-family: 'Ubuntu', sans-serif;
   }
-  .content .tablaLibro table tbody tr td::before{
+  .content .tablaLibro table tbody tr td::before {
     content: attr(data-label);
     font-weight: 700;
     font-size: 1.3em;
@@ -620,10 +671,10 @@ label #sidebar_btn:hover {
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
   }
-  .content .tablaLibro table tbody td:hover{
+  .content .tablaLibro table tbody td:hover {
     background-color: #ee5253;
   }
-  .content  .inputForm{
+  .content .inputForm {
     width: 100%;
     max-height: 100%;
     display: flex;
@@ -632,7 +683,7 @@ label #sidebar_btn:hover {
     justify-content: center;
     align-items: center;
   }
-  .content .inputForm .grupo-input{
+  .content .inputForm .grupo-input {
     width: 100%;
     height: 100%;
     display: flex;
@@ -640,7 +691,7 @@ label #sidebar_btn:hover {
     justify-content: center;
     align-items: center;
   }
-  .content .inputForm .grupo-input label{
+  .content .inputForm .grupo-input label {
     font-family: "Roboto Slab", serif;
     color: #22242a;
     font-weight: 600;
@@ -649,7 +700,7 @@ label #sidebar_btn:hover {
     width: 100%;
     height: 5vh;
   }
-  .content .inputForm .grupo-input input{
+  .content .inputForm .grupo-input input {
     border: none;
     width: 100%;
     height: 4vh;
@@ -661,10 +712,10 @@ label #sidebar_btn:hover {
     border-bottom: 3px solid #222;
     transition: .3s border;
   }
-  .botones button{
+  .botones button {
     width: 50%;
     height: 50px;
-    border:none;
+    border: none;
     margin: 10px;
     font-size: 1.3em;
     color: #ee5253;

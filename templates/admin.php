@@ -21,7 +21,7 @@ if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
             </a>
         </div>
         <div class="opciones">
-            <a href="" class="link">
+            <a href="../forms/form_reserve_insert.php" class="link">
                 <div class="imgcont">
                     <img src="../img/calendario.svg" alt="">
                 </div>
@@ -30,7 +30,7 @@ if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
         </div>
     </div>
     
-    <h3><a href="http://localhost/33biblioteca_Local/forms/form_book_insert.php">Add Book</a></h3>
+    <h3><a href="../forms/form_book_insert.php">Add Book</a></h3>
     <div class="tablaLibro">
 
         <table>
@@ -44,7 +44,7 @@ if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
             </thead>
             <tbody>
                 <?php
-include '../forms/bd_connect_LocalHost.php';
+    include '../forms/bd_connect_Localhost.php';
     $sql = "SELECT * FROM _33_book order by inserted_on ";
     if ($result = mysqli_query($con, $sql)) {
         while ($mostrar = mysqli_fetch_array($result)) {
@@ -60,7 +60,7 @@ include '../forms/bd_connect_LocalHost.php';
                     <td data-label = "Author"><?php echo $mostrar['author']; ?></td>
                     <td data-label = "Status"><?php echo $status; ?></td>
                     <td>
-                        <form action="http://localhost/33biblioteca_Local/forms/form_book_Action.php" method="POST">
+                        <form action="../forms/form_book_Action.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $mostrar['book_id']; ?>">
                             <button type="submit" name='enviar'><i class="fas fa-pen"></i></button>
                         </form>

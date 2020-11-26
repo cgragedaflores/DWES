@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('bd_connect_LocalHost.php');
     if (isset($_POST['actualizar'])) {
         $user_id = $_POST['user_id'];
@@ -14,10 +15,12 @@
         addres = '$addres' WHERE user_id = '$user_id' ";
         if ($con -> query($sql) == true) {
             if (isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 1) {
-                header('location: ../templates/partner.php');
-            } else {
+                
                 header('location: ../templates/admin.php');
-            }
+            } else if(isset($_SESSION['username']) && $_SESSION['username']['member_type'] == 0){
+
+                header('location: ../templates/partner.php');
+            } else {echo "suputamadre";}
            
         }else{
             echo "Error Updating ".$con -> error;

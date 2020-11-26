@@ -3,7 +3,7 @@ require('../header.php');
 require('bd_connect_LocalHost.php');
 ?>
 <div class="content">
-    <?php
+<?php
   if(isset($_POST['entrar'])){
     $userName = $_POST['user_name'];
     $password = $_POST['passwd'];

@@ -41,7 +41,7 @@ if ($consulta = mysqli_query($con, $sql)) {
 
         <div class="botones">
             <input type="hidden" name="user_id" value="<?php echo $fila['user_id']; ?>">
-            <button type="submit" name="actualizar">Update</button>
+            <button type="submit" name="actualizar"><i class="fas fa-user-edit"></i></button>
         </div>
     </form>
 </div>

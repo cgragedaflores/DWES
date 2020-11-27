@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/33biblioteca_Local/img/fav/logo_size_invert.jpg" type="image/x-icon">
     <title>Homer's Library</title>
     <link rel="stylesheet" href="http://localhost/33Biblioteca_Local/templates/css_templates/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">

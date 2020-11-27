@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Homer's Library</title>
-  <link rel="stylesheet" href="http://localhost/33Biblioteca_Local/css/style.css">
+  <link rel="stylesheet" href="http://localhost/33biblioteca_Local/img/fav/logo_size_invert.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 </head>

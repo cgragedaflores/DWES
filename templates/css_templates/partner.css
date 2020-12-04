@@ -168,15 +168,30 @@ label #sidebar_btn:hover {
 }
 
 /* CSS ADMIN CONTENT START */
-.content .book{
-  width: 15%;
-  height: 15;
+.content .result_book{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-.content .book .img_containter{
+.content .result_book .book{
+  width: 15%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px;
+}
+.content .result_book .book .img_containter{
   width: 100%;
   height: 80%;
 }
-.content .book .img_containter img{
+.content .result_book .book .img_containter img{
   width: 100%;
   height: 100%;
 }
@@ -280,14 +295,25 @@ label #sidebar_btn:hover {
     justify-content: center;
     align-items: center;
   }
-  .content .book {
-    width: 70%;
-    height: 10%;
-    margin: 10px;
-  }
-  .content .book .img_containter {
+  .content .result_book{
     width: 100%;
-    height: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .content .result_book .book{
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
   }
   .content .book .img_containter img {
     width: 100%;
@@ -471,40 +497,24 @@ label #sidebar_btn:hover {
   .active {
     display: block;
   }
-  .content .cajas .opciones {
-    width: 100%;
-    height: 100px;
-    margin: 10px;
-    display: flex;
-    justify-content: colum;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-  }
-  .content .cajas .opciones .link {
+  .content .result_book{
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-  .content .cajas .formularios {
-    width: 100%;
-    height: 300px;
-    background: #ff4757;
-    margin: 10px;
-    border-radius: 20px;
-  }
-  .content .cajas .reservas {
-    width: 100%;
-    height: 300px;
-    background: #7bed9f;
-    margin: 10px;
-    border-radius: 10px;
+  .content .result_book .book{
+    width: 40%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
   }
   .content .tablaLibro {
     width: 100%;

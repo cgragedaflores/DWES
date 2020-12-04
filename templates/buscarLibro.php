@@ -1,33 +1,51 @@
 <?php 
-$mysqli = new mysqli("localhost","root","","_33_biblioteca");
+session_start();
+include '../forms/bd_connect_LocalHost.php';
 $salida = "";
-$query = "SELECT * FROM _33_book";
+$query = "SELECT * FROM _33_book ";
 if(isset($_POST["consulta"])){
-	$q  = $mysqli -> real_escape_string($_POST['consulta']);
+	$q  = $con -> real_escape_string($_POST['consulta']);
 	$query = "SELECT * FROM _33_book WHERE tittle LIKE '%$q%' ";
 }
-$resultado = $mysqli -> query($query);
+$resultado = $con -> query($query);
 if ($resultado ->num_rows > 0) {
 	# code...
-	$salida .= "<table>
-	<caption><h3>Book's Recently Added</h3></caption>
-	<thead>
-		<th>Title</th>
-		<th>Author</th>
-	</thead>
-	<tbody>";
 	while ($fila = $resultado -> fetch_assoc()) {
 		# code...
-		$salida.= "<tr>
-			<td data-label = 'Title'>".$fila['tittle']."</td>
-			<td data-label = 'Author'>".$fila['author']."</td>
-		</tr>";
+		if(isset($_SESSION['username'])){
+			$salida.="
+			<div class='book'>
+				<div class='img_containter'>
+					<img src='https://remotehost.es/student33/dwes/img/splatterbook.svg'>
+				</div>
+				<div class = 'overlay'>
+					<h4>".$fila['tittle']."</h4>
+					<h4>".$fila['author']."</h4>
+				</div>
+				<form action='' method='post'>
+						<input type='hidden' name='book' value=".$fila['book_id'].">
+					<div class = 'botones'>
+						<button type='button' name='reservar'>Reserve</button>
+					</div>
+				</form>
+			</div>";
+		}else{
+			//IF NOT ONLY LOOK BOOKS
+			$salida.="
+				<div class='book'>
+					<div class='img_containter'>
+						<img src='https://remotehost.es/student33/dwes/img/splatterbook.svg'>
+					</div>
+					<div class = 'overlay'>
+						<h4>".$fila['tittle']."</h4>
+						<h4>".$fila['author']."</h4>
+					</div>
+				</div>";
+		}
 	}
-	$salida="</tbody></table>";
-
 }else{
 	$salida .= "No hay Datos :(";
 }
 echo $salida;
-$mysqli -> close();
+$con -> close();
 ?>
